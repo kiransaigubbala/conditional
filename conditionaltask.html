@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .card {
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+
+      .card h1 {
+        color: #333;
+        font-size: 24px;
+      }
+
+      .card label {
+        display: inline-block;
+        width: 180px;
+        margin-bottom: 10px;
+      }
+
+      .card input {
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+      }
+
+      .card button {
+        padding: 8px 15px;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .card button:hover {
+        background-color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="card">
+        <h1>Check Even Number</h1>
+
+        <label>Enter number :</label>
+        <input type="text" placeholder="Enter number" id="num" /><br />
+
+        <label>Result :</label>
+        <input type="text" id="res" /><br />
+
+        <button onclick="checkEven()">Check Number</button>
+      </div>
+      <div class="card">
+        <h1>Check Positive Number</h1>
+
+        <label>Enter number :</label>
+        <input type="text" placeholder="Enter number" id="num1" /><br />
+
+        <label>Result :</label>
+        <input type="text" id="res1" /><br />
+
+        <button onclick="checkPositive()">Check Number</button>
+      </div>
+      <div class="card">
+        <h1>Battery Status</h1>
+
+        <label>Enter Battery :</label>
+        <input
+          type="text"
+          placeholder="Enter battery %"
+          id="batteryNum"
+        /><br />
+
+        <label>Result :</label>
+        <input type="text" id="batteryResult" /><br />
+
+        <button onclick="checkBattery()">Check Battery</button>
+      </div>
+      <div class="card">
+        <h1>Check Balance</h1>
+
+        <label>Enter Balance :</label>
+        <input type="text" placeholder="Enter balance" id="balanceNum" /><br />
+
+        <label>Result :</label>
+        <input type="text" id="balanceResult" /><br />
+
+        <button onclick="checkBalance()">Check Balance</button>
+      </div>
+      <div class="card">
+        <h1>Check Weight</h1>
+
+        <label>Enter Weight :</label>
+        <input type="text" placeholder="Enter weight" id="weightNum" /><br />
+
+        <label>Result :</label>
+        <input type="text" id="weightResult" /><br />
+
+        <button onclick="checkWeight()">Check Weight</button>
+      </div>
+      <div class="card">
+        <h1>Check Screen Size</h1>
+
+        <label>Enter Screen Size :</label>
+        <input
+          type="text"
+          placeholder="Enter screen size"
+          id="screenSizeNum"
+        /><br />
+
+        <label>Result :</label>
+        <input type="text" id="screenSizeResult" /><br />
+
+        <button onclick="checkScreenSize()">Check Screen</button>
+      </div>
+      <div class="card">
+        <h1>Even or Odd</h1>
+
+        <label>Enter Number :</label>
+        <input type="text" placeholder="Enter number" id="evenOddNum" /><br />
+
+        <label>Result :</label>
+        <input type="text" id="evenOddResult" /><br />
+
+        <button onclick="checkEvenOdd()">Check Number</button>
+      </div>
+      <div class="card">
+        <h1>Positive or Negative</h1>
+
+        <label>Enter Number :</label>
+        <input
+          type="text"
+          placeholder="Enter number"
+          id="positiveNegativeNum"
+        /><br />
+
+        <label>Result :</label>
+        <input type="text" id="positiveNegativeResult" /><br />
+
+        <button onclick="checkPositiveNegative()">Check Number</button>
+      </div>
+      <div class="card">
+        <h1>Voting Eligibility</h1>
+
+        <label>Enter Age :</label>
+        <input type="text" placeholder="Enter age" id="votingAge" /><br />
+
+        <label>Result :</label>
+        <input type="text" id="votingResult" /><br />
+
+        <button onclick="checkVotingEligibility()">Check Eligibility</button>
+      </div>
+      <div class="card">
+        <h1>Parking Availability</h1>
+
+        <label>Enter Parking Spaces :</label>
+        <input
+          type="text"
+          placeholder="Enter spaces"
+          id="parkingSpacesNum"
+        /><br />
+
+        <label>Result :</label>
+        <input type="text" id="parkingResult" /><br />
+
+        <button onclick="checkParking()">Check Parking</button>
+      </div>
+      <div class="card">
+        <h1>Weight Check</h1>
+
+        <label>Enter Weight :</label>
+        <input
+          type="text"
+          placeholder="Enter weight"
+          id="weightLimitNum"
+        /><br />
+
+        <label>Result :</label>
+        <input type="text" id="weightLimitResult" /><br />
+
+        <button onclick="checkWeightLimit()">Check Weight</button>
+      </div>
+      <div class="card">
+        <h1>Positive, Negative or Zero</h1>
+
+        <label>Enter Number :</label>
+        <input type="text" placeholder="Enter number" id="pnzNumber" /><br />
+
+        <label>Result :</label>
+        <input type="text" id="pnzResult" /><br />
+
+        <button onclick="checkNumberType()">Check Number</button>
+      </div>
+      <div class="card">
+        <h1>Grade Calculator</h1>
+
+        <label>Enter Marks :</label>
+        <input type="text" placeholder="Enter marks" id="marksNumber" /><br />
+
+        <label>Grade :</label>
+        <input type="text" id="marksResult" /><br />
+
+        <button onclick="checkGrade()">Check Grade</button>
+      </div>
+      <div class="card">
+        <h1>Speed Checker</h1>
+
+        <label>Enter Speed :</label>
+        <input type="text" placeholder="Enter speed" id="speedNumber" /><br />
+
+        <label>Result :</label>
+        <input type="text" id="speedResult" /><br />
+
+        <button onclick="checkSpeed()">Check Speed</button>
+      </div>
+      <div class="card">
+        <h1>Delivery Charge</h1>
+
+        <label>Enter Distance :</label>
+        <input
+          type="text"
+          placeholder="Enter distance"
+          id="deliveryDistance"
+        /><br />
+
+        <label>Result :</label>
+        <input type="text" id="deliveryResult" /><br />
+
+        <button onclick="checkDeliveryCharge()">Check Charge</button>
+      </div>
+      <div class="card">
+        <h1>Fuel Level Checker</h1>
+
+        <label>Enter Fuel Level :</label>
+        <input
+          type="text"
+          placeholder="Enter fuel level"
+          id="fuelLevel"
+        /><br />
+
+        <label>Result :</label>
+        <input type="text" id="fuelResult" /><br />
+
+        <button onclick="checkFuel()">Check Fuel</button>
+      </div>
+      <div class="card">
+        <h1>Storage Checker</h1>
+
+        <label>Enter Storage :</label>
+        <input
+          type="text"placeholder="Enter storage"id="storageLevel"/><br />
+
+        <label>Result :</label>
+        <input type="text" id="storageResult" /><br />
+
+        <button onclick="checkStorage()">Check Storage</button>
+      </div>
+    </div>
+    <script src="conditionaltask.js"></script>
+  </body>
+</html>

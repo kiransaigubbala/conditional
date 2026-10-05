@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #e0f7fa;
+        padding: 20px;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .card {
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #80cbc4;
+        border-radius: 10px;
+        box-shadow: 0px 3px 8px #b2dfdb;
+    }
+
+    .card h1 {
+        color: #00695c;
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .card label {
+        display: inline-block;
+        width: 160px;
+        margin-bottom: 10px;
+        color: #333333;
+    }
+
+    .card input {
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #999999;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .card input:focus {
+        border-color: #009688;
+    }
+
+    .card button {
+        padding: 9px 18px;
+        background-color: #009688;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .card button:hover {
+        background-color: #00695c;
+    }
+</style>
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="card">
+        <h1>Check Number Value</h1>
+        <label>Enter Number :</label>
+        <input
+          type="text"
+          placeholder="Enter number"
+          id="checkNumberValue"
+        /><br />
+        <button onclick="checkNumberValue()">Check</button><br />
+        <label>Result :</label>
+        <input type="text" id="checkNumberResult" /><br />
+      </div>
+      <div class="card">
+        <h1>Strict Equality Check</h1>
+
+        <label>Enter Number :</label>
+        <input type="text" placeholder="Enter number" id="strictNumber" /><br />
+
+        <label>Result :</label>
+        <input type="text" id="strictResult" /><br />
+
+        <button onclick="checkStrictNumber()">Check Number</button>
+      </div>
+      <div class="card">
+        <h1>Divisibility Check</h1>
+
+        <label>Enter Number :</label>
+        <input
+          type="text"
+          placeholder="Enter number"
+          id="divisibleNumber"
+        /><br />
+
+        <label>Result :</label>
+        <input type="text" id="divisibleResult" /><br />
+
+        <button onclick="checkDivisible()">Check Number</button>
+      </div>
+      <div class="card">
+        <h1>Check Both Numbers</h1>
+
+        <label>Enter Number 1 :</label>
+        <input type="text" placeholder="Enter number 1" id="bothNum1" /><br />
+
+        <label>Enter Number 2 :</label>
+        <input type="text" placeholder="Enter number 2" id="bothNum2" /><br />
+
+        <label>Result :</label>
+        <input type="text" id="bothResult" /><br />
+
+        <button onclick="checkBothNumbers()">Check Numbers</button>
+      </div>
+      <div class="card">
+        <h1>Positive and Even Check</h1>
+
+        <label>Enter Number :</label>
+        <input
+          type="text"
+          placeholder="Enter number"
+          id="positiveEvenNum"
+        /><br />
+
+        <label>Result :</label>
+        <input type="text" id="positiveEvenResult" /><br />
+
+        <button onclick="checkPositiveEven()">Check Number</button>
+      </div>
+      <div class="card">
+        <h1>Switch Case</h1>
+
+        <label>Enter Value :</label>
+        <input type="text" placeholder="Enter value" id="switchValue" /><br />
+
+        <label>Result :</label>
+        <input type="text" id="switchResult" /><br />
+
+        <button onclick="checkSwitch()">Check Value</button>
+      </div>
+      <div class="card">
+        <h1>Simple Calculator</h1>
+
+        <label>Enter Number 1 :</label>
+        <input type="text" placeholder="Enter number 1" id="calcNum1" /><br />
+
+        <label>Enter Number 2 :</label>
+        <input type="text" placeholder="Enter number 2" id="calcNum2" /><br />
+
+        <label>Enter Operator :</label>
+        <input
+          type="text"
+          placeholder="+, -, *, /, %"
+          id="calcOperator"
+        /><br />
+
+        <label>Result :</label>
+        <input type="text" id="calcResult" /><br />
+
+        <button onclick="calculate()">Calculate</button>
+      </div>
+    </div>
+    <script type="text/javascript" src="conditional.js"></script>
+  </body>
+</html>
